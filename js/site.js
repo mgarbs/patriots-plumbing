@@ -331,6 +331,11 @@
     chatinput.style.height = Math.min(chatinput.scrollHeight, 110) + 'px';
   });
 
+  // when the on-screen keyboard opens, keep the newest messages in view
+  chatinput.addEventListener('focus', function () {
+    setTimeout(function () { chatlog.scrollTop = chatlog.scrollHeight; }, 300);
+  });
+
   chatinput.addEventListener('keydown', function (e) {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); chatform.requestSubmit(); }
   });
@@ -355,6 +360,7 @@
     var bot = addBubble('bot', '');
     bot.classList.add('is-typing');
     var gotFirst = false;
+    var bubbleStart = 0; // index into `answer` where the current bubble's text begins
     var slowTimer = setTimeout(function () {
       if (!gotFirst) bot.textContent = 'Connecting — waking our assistant up…';
     }, 6000);
@@ -383,7 +389,21 @@
             if (payload.t) {
               if (!gotFirst) { gotFirst = true; clearTimeout(slowTimer); bot.classList.remove('is-typing'); bot.textContent = ''; }
               answer += payload.t;
-              bot.textContent = answer;
+              bot.textContent = answer.slice(bubbleStart).replace(/^\s+/, '');
+              chatlog.scrollTop = chatlog.scrollHeight;
+            }
+            if (payload.leadCreated) {
+              // The assistant filed the request itself — show it, then let the
+              // confirmation text stream into a fresh bubble under the chip.
+              bot.classList.remove('is-typing');
+              if (!answer.slice(bubbleStart).trim()) bot.remove();
+              var chip = document.createElement('div');
+              chip.className = 'msg msg--system';
+              chip.textContent = 'Request sent — the shop has your number';
+              chatlog.appendChild(chip);
+              bot = addBubble('bot', '');
+              bot.classList.add('is-typing');
+              bubbleStart = answer.length;
               chatlog.scrollTop = chatlog.scrollHeight;
             }
             if (payload.error) return finish(answer, payload.error);
