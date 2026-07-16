@@ -42,7 +42,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+/* height:auto keeps the width/height attributes as aspect-ratio hints only,
+   so CSS width overrides can never stretch an image */
+img { max-width: 100%; height: auto; display: block; }
 
 a { color: var(--navy); }
 
