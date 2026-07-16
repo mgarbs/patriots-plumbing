@@ -123,9 +123,9 @@
   var fileInput = $('#photos');
   var thumbs = $('#thumbs');
 
-  function openPicker() { fileInput.click(); }
-  dropzone.addEventListener('click', openPicker);
-  dropzone.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPicker(); } });
+  // The dropzone is a <label for="photos">, so clicking it opens the picker natively —
+  // no JS involved. Keyboard support still needs a hand:
+  dropzone.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); } });
   fileInput.addEventListener('change', function () { addFiles(fileInput.files); fileInput.value = ''; });
 
   ['dragover', 'dragenter'].forEach(function (ev) {

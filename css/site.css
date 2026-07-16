@@ -315,6 +315,7 @@ h3 { font-size: clamp(20px, 2.2vw, 24px); font-weight: 600; letter-spacing: .02e
 }
 
 .dropzone {
+  display: block;
   margin-top: 12px;
   border: 1.5px dashed #B7C4D6;
   border-radius: 10px;

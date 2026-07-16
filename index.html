@@ -122,12 +122,12 @@
           <legend>Tell us more <span class="opt">(optional)</span></legend>
           <textarea name="details" id="details" rows="3" maxlength="2000"
             placeholder="Where is it, how long has it been happening, anything we should know&hellip;"></textarea>
-          <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Add photos">
+          <label class="dropzone" id="dropzone" for="photos" tabindex="0">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3l2-2h6l2 2h3v13H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
             <strong>Add photos of the problem</strong>
             <span>A photo saves a trip &mdash; snap the leak, the heater tag, the works. Up to 6.</span>
-            <input type="file" id="photos" accept="image/*" capture="environment" multiple hidden>
-          </div>
+            <input type="file" id="photos" accept="image/*" multiple hidden>
+          </label>
           <div class="thumbs" id="thumbs"></div>
           <div class="step__nav">
             <button type="button" class="btn btn--plain" data-back>Back</button>
