@@ -201,8 +201,10 @@
     e.preventDefault();
     var name = $('#f-name').value.trim();
     var phone = $('#f-phone').value.trim();
+    var email = $('#f-email').value.trim();
     if (name.length < 2) { showError('Please tell us your name.'); $('#f-name').focus(); return; }
-    if (phone.replace(/\D/g, '').length < 7) { showError('Please enter a valid phone number.'); $('#f-phone').focus(); return; }
+    if (phone.replace(/\D/g, '').length !== 10) { showError('Please enter a 10-digit phone number.'); $('#f-phone').focus(); return; }
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { showError('That email doesn’t look right — fix it or leave it blank.'); $('#f-email').focus(); return; }
 
     var btn = $('#submitbtn');
     btn.disabled = true;
@@ -211,6 +213,7 @@
     var fd = new FormData();
     fd.append('name', name);
     fd.append('phone', phone);
+    fd.append('email', email);
     fd.append('address', $('#f-address').value.trim());
     fd.append('details', $('#details').value.trim());
     fd.append('problem', lead.problem || 'Service request');
@@ -447,5 +450,55 @@
       document.getElementById('request').scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   });
+
+  /* ================= phone field: 10-digit numeric, live-formatted ================= */
+  (function () {
+    var el = document.getElementById('f-phone');
+    if (!el) return;
+    el.setAttribute('inputmode', 'numeric');
+    el.setAttribute('maxlength', '16');
+
+    var hint = document.createElement('p');
+    hint.setAttribute('aria-live', 'polite');
+    hint.style.cssText = 'font-size:12.5px;line-height:1.3;margin:5px 2px 0;min-height:16px;';
+    el.parentNode.appendChild(hint);
+    function setHint(msg, bad) {
+      hint.textContent = msg || '';
+      hint.style.color = bad ? '#C02D40' : '#5A6A85';
+    }
+
+    function fmt(d) {
+      d = d.slice(0, 10);
+      if (d.length > 6) return '(' + d.slice(0, 3) + ') ' + d.slice(3, 6) + '-' + d.slice(6);
+      if (d.length > 3) return '(' + d.slice(0, 3) + ') ' + d.slice(3);
+      if (d.length > 0) return '(' + d;
+      return '';
+    }
+
+    el.addEventListener('input', function () {
+      var caret = el.selectionStart;
+      var digitsBeforeCaret = el.value.slice(0, caret).replace(/\D/g, '').length;
+      var rejected = /[^\d\s()\-+.]/.test(el.value);
+      var digits = el.value.replace(/\D/g, '');
+      if (digits.length === 11 && digits.charAt(0) === '1') digits = digits.slice(1);
+      digits = digits.slice(0, 10);
+      el.value = fmt(digits);
+      var pos = 0, seen = 0;
+      while (pos < el.value.length && seen < digitsBeforeCaret) {
+        if (/\d/.test(el.value.charAt(pos))) seen++;
+        pos++;
+      }
+      try { el.setSelectionRange(pos, pos); } catch (e) {}
+      if (rejected) setHint('Numbers only, please.', true);
+      else if (digits.length && digits.length < 10) setHint(digits.length + ' of 10 digits', false);
+      else setHint('', false);
+    });
+
+    el.addEventListener('blur', function () {
+      var d = el.value.replace(/\D/g, '');
+      if (d.length && d.length !== 10) setHint('A phone number needs all 10 digits.', true);
+      else setHint('', false);
+    });
+  })();
 
 })();
