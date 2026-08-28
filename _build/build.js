@@ -611,7 +611,7 @@ ${header()}
 ${pageHero(
     'What we do',
     'Plumbing Services',
-    'One shop, one standard, every job guaranteed &mdash; from a 2 a.m. burst pipe to a bathroom you have been planning for a year.',
+    'One shop, one standard, every job guaranteed &mdash; from a burst pipe to a bathroom you have been planning for a year.',
     'Request service',
     'Three quick steps. We&rsquo;ll call you back.'
   )}
@@ -752,8 +752,8 @@ ${countyBlocks}
   </section>
 
   <section class="prose reveal">
-    <h2>Emergencies versus scheduled work</h2>
-    <p>For an active leak, a burst line or a main-line backup, call &mdash; do not wait on a form. And before we arrive, shut off your main water valve, which is usually where the supply enters the crawlspace or basement, or at the meter near the road. That single step is the difference between a repair and a restoration job. If you smell gas, leave the building first, then call your gas company or 911 from outside.</p>
+    <h2>If water is moving right now</h2>
+    <p>For an active leak, a burst line or a main-line backup, call rather than filling in a form. And before we arrive, shut off your main water valve, which is usually where the supply enters the crawlspace or basement, or at the meter near the road. That single step is the difference between a repair and a restoration job. If you smell gas, leave the building first, then call your gas company or 911 from outside.</p>
     <p>For everything else &mdash; a heater on its last legs, a drain that has been slow for months, a remodel you have been planning &mdash; booking ahead gets you a better slot and our full attention. That is especially true at the far end of the territory in Marion and Wytheville, where a scheduled visit is far easier to do well than a same-day scramble.</p>
   </section>
   <section class="prose reveal">

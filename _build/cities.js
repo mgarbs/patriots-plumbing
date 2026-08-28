@@ -15,7 +15,7 @@ module.exports = [
   town: 'Abingdon',
   county: 'Washington County',
   title: 'Plumber in Abingdon, VA — Repairs, Water Heaters & Remodels',
-  meta: 'Master Plumber-led plumbing in Abingdon, Virginia. Emergency repairs, water heaters, drains and remodels in the historic district and throughout Washington County.',
+  meta: 'Master Plumber-led plumbing in Abingdon, Virginia. Urgent repairs, water heaters, drains and remodels in the historic district and throughout Washington County.',
   h1: 'Plumber in Abingdon, Virginia',
   lead: 'Abingdon is home base. It is also the town where we most often open a wall and find something older than the house&rsquo;s last three owners.',
   intro: [
@@ -29,7 +29,7 @@ module.exports = [
       'And because the district is genuinely old, we take care with access. Original plaster, heart pine floors and finished basements all deserve a plumber who plans the route in rather than cutting the shortest path.',
     ]},
     { h2: 'Winter here', kind: 'prose', body: [
-      'Abingdon sits at roughly 2,000 feet, and the crawlspaces under a lot of these homes were vented for a milder assumption than reality. Frozen and burst supply lines are our most common January and February emergency call. If your crawlspace has open vents and uninsulated lines running through it, that is worth addressing in October rather than at 2 a.m. in a cold snap.',
+      'Abingdon sits at roughly 2,000 feet, and the crawlspaces under a lot of these homes were vented for a milder assumption than reality. Frozen and burst supply lines are what we see most in January and February. If your crawlspace has open vents and uninsulated lines running through it, that is worth addressing in October rather than after the damage is done.',
     ]},
   ],
   faqs: [
@@ -43,7 +43,7 @@ module.exports = [
   slug: 'bristol-va',
   town: 'Bristol',
   county: 'City of Bristol',
-  title: 'Plumber in Bristol, VA — Emergency Repairs & Water Heaters',
+  title: 'Plumber in Bristol, VA — Repairs, Water Heaters & Remodels',
   meta: 'Licensed plumbing in Bristol, Virginia. Burst pipes, water heaters, drain and sewer line repair, and full bathroom remodels. Master Plumber-led. Call (276) 285-1392.',
   h1: 'Plumber in Bristol, Virginia',
   lead: 'A city with a state line down the middle of its main street, and a housing stock old enough to have opinions.',
@@ -90,7 +90,7 @@ module.exports = [
       'A backup on a septic property can be a plumbing problem or a tank problem, and they have completely different fixes and completely different costs. We diagnose which side of the tank the trouble is on first. It is a short conversation that regularly saves people from paying to solve the wrong problem.',
     ]},
     { h2: 'Distance is real, so plan ahead where you can', kind: 'prose', body: [
-      'Marion is roughly half an hour up I-81 from our base in Abingdon, and we cover it regularly. For genuine emergencies, call and we will tell you straight where you sit in the day. For anything that is not an emergency &mdash; a heater on its last legs, a drain that has been slow for months, a remodel you are planning &mdash; booking ahead gets you a much better slot than waiting for it to become urgent.',
+      'Marion is roughly half an hour up I-81 from our base in Abingdon, and we cover it regularly. Call and we will tell you straight where you sit in the day. For anything that can wait &mdash; a heater on its last legs, a drain that has been slow for months, a remodel you are planning &mdash; booking ahead gets you a much better slot than waiting for it to become urgent.'
     ]},
   ],
   faqs: [
@@ -123,7 +123,7 @@ module.exports = [
       'This is the part of our territory where an autumn walk-through genuinely pays for itself. Insulating exposed runs, checking heat tape, and knowing exactly where your main shutoff is costs almost nothing and prevents the call nobody wants to make.',
     ]},
     { h2: 'Plan non-urgent work ahead', kind: 'prose', body: [
-      'Given the drive, scheduled work in Wytheville is easier for everyone to do well than a same-day scramble. If you have a water heater on borrowed time, a remodel in mind, or a drain that has been degrading for months, calling ahead gets you a proper slot and our full attention. For genuine emergencies, call anyway and we will be straight with you about what we can do.',
+      'Given the drive, scheduled work in Wytheville is easier for everyone to do well than a same-day scramble. If you have a water heater on borrowed time, a remodel in mind, or a drain that has been degrading for months, calling ahead gets you a proper slot and our full attention.'
     ]},
   ],
   faqs: [

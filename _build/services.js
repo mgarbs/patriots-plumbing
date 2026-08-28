@@ -4,14 +4,16 @@
 module.exports = [
 {
   slug: 'emergency-plumber',
-  nav: 'Emergency repairs',
-  h1: 'Emergency Plumber in Southwest Virginia',
-  title: 'Emergency Plumber — Southwest Virginia | Burst Pipes & Leaks',
-  meta: 'Burst pipes, active leaks and frozen lines across Abingdon, Bristol, Marion and Wytheville. Master Plumber-led, licensed and insured. Call (276) 285-1392.',
+  nav: 'Urgent repairs',
+  h1: 'Urgent Plumbing Repairs in Southwest Virginia',
+  title: 'Urgent Plumbing Repairs — Abingdon &amp; SW Virginia',
+  // No 24/7 language anywhere on this page, and no disclaimer either. The
+  // posted business hours on the Google profile do that job quietly.
+  meta: 'Burst pipes, active leaks, frozen lines and failed water heaters across Abingdon, Bristol, Marion and Wytheville. Master Plumber-led. Call (276) 285-1392.',
   problem: 'Leak or drip',
-  lead: 'A plumbing emergency is not the moment to be comparison shopping. It is the moment to shut the water off and get a licensed plumber moving.',
+  lead: 'Water where it should not be. Here is what to do in the first two minutes, and how we handle it when we get there.',
   intro: [
-    'Most of the emergency calls we take in Washington, Smyth and Wythe counties fall into a short list: a supply line that let go in a crawlspace, a water heater that finally split, a frozen pipe that thawed into a flood, or a drain backing up into a finished basement. All of them get worse by the hour, and most of them are made dramatically cheaper by two minutes of the right action before anyone arrives.',
+    'Most of the urgent calls we take in Washington, Smyth and Wythe counties fall into a short list: a supply line that let go in a crawlspace, a water heater that finally split, a frozen pipe that thawed into a flood, or a drain backing up into a finished basement. All of them get worse by the hour, and most of them are made dramatically cheaper by two minutes of the right action before anyone arrives.',
     'We are a Master Plumber-led shop, not a call center that dispatches whoever is closest. When you call, you are talking to the people who will actually do the work.',
   ],
   firstBlock: {
@@ -24,7 +26,7 @@ module.exports = [
     ],
   },
   sections: [
-    { h2: 'What we handle on an emergency call', kind: 'list', items: [
+    { h2: 'What we take care of', kind: 'list', items: [
       'Burst and split supply lines &mdash; copper, CPVC, PEX and galvanized',
       'Frozen pipes: thawing, and repairing the section that failed',
       'Water heater failures &mdash; leaking tanks, no hot water, relief valve discharge',
@@ -44,7 +46,7 @@ module.exports = [
     ['Where is my main water shutoff?', 'In most homes here it is where the supply line enters the crawlspace or basement, often near the pressure tank or water heater. If you cannot find one inside, there is a curb stop at the meter near the road that takes a meter key. It is worth finding yours before you need it.'],
     ['My pipes are frozen but nothing has burst. What should I do?', 'Open the faucet the frozen line feeds so melting ice has somewhere to go, and apply gentle heat &mdash; a hair dryer or a space heater at a safe distance. Never use an open flame. Then watch closely as it thaws: a split usually reveals itself in the first minutes of flow, which is why you want the main shutoff within reach.'],
     ['Do you charge to come out and diagnose?', 'We give an honest diagnosis before any work and we do not play games with the bill. Call and we will tell you plainly how the visit works before we roll a truck.'],
-    ['Can this be financed?', 'Yes. We partner with Hearth, so you can see payment options without affecting your credit score, usually with funding in one to three days. That matters most on the emergencies that turn into a repipe or a heater replacement.'],
+    ['Can this be financed?', 'Yes. We partner with Hearth, so you can see payment options without affecting your credit score, usually with funding in one to three days. That matters most on the repairs that turn into a repipe or a heater replacement.'],
   ],
 },
 {
