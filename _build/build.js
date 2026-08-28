@@ -11,7 +11,7 @@ const fs = require('fs');
 const path = require('path');
 const { BIZ, TOWNS } = require('./content');
 const SERVICES = require('./services');
-const CITIES = require('./cities');
+const CITIES = require('./cities').concat(require('./cities-2'));
 
 const ROOT = path.join(__dirname, '..');
 const BUILD_STAMP = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
