@@ -15,9 +15,10 @@ const BIZ = {
   email: 'thepatriotsplumber@gmail.com',
   facebook: 'https://www.facebook.com/profile.php?id=61584678868541',
   hearth: 'https://app.gethearth.com/partners/patriots-plumbing/bill/apply',
-  // TODO(Bill): paste the Google Maps place URL + the g.page review short link.
-  gbpUrl: '',
-  reviewUrl: '',
+  // Verified 2026-08-28 from the profile's "Ask for reviews" panel; the g.page
+  // token base64url-decodes to CID 9996931938350486345, matching the profile fid.
+  gbpUrl: 'https://maps.google.com/?cid=9996931938350486345',
+  reviewUrl: 'https://g.page/r/CUlTI8WhPLyKEBM/review',
   region: 'Southwest Virginia',
   regionShort: 'SWVA',
   geo: { lat: 36.7098, lng: -81.9773 }, // Abingdon, VA — service-area centroid
