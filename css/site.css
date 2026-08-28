@@ -884,7 +884,9 @@ body.js .reveal.is-in { opacity: 1; transform: none; }
 
 /* -------------------------------------------------------------- breadcrumbs */
 
-.crumbs { padding: 22px 0 4px; }
+/* Align the breadcrumb with the article's text column, not the full wrap —
+   otherwise it floats out to the left of the content it belongs to. */
+.crumbs { max-width: 74ch; margin: 0 auto; padding: 22px 0 4px; }
 .crumbs ol {
   display: flex; flex-wrap: wrap; align-items: center;
   gap: 6px 10px; list-style: none;
