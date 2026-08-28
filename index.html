@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
-<title>Patriot's Plumbing — Master Plumber in Southwest Virginia | (276) 285-1392</title>
-<meta name="description" content="Patriot's Plumbing is a Master Plumber–led, veteran family plumbing company serving the I-81 corridor of Southwest Virginia. Repairs, water heaters, drains, remodels. Send a photo of the problem and get a call back.">
+<title>Plumber in Abingdon, VA | Patriot's Plumbing — SW Virginia</title>
+<meta name="description" content="Master Plumber-led, veteran family plumbing in Abingdon, Bristol, Marion and Wytheville. Repairs, water heaters, drains and remodels. Send a photo, get a call.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/eagle-32.png">
 <link rel="apple-touch-icon" href="assets/eagle-180.png">
 <link rel="canonical" href="https://thepatriotsplumber.com/">
@@ -14,21 +14,85 @@
 <meta property="og:url" content="https://thepatriotsplumber.com/">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0A1428">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://patriots-plumbing-api.onrender.com" crossorigin>
+<!-- Fonts load off the critical path: preload warms the stylesheet, media="print"
+     keeps it from blocking first paint until onload flips it to all. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/site.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Plumber",
-  "name": "Patriot's Plumbing",
-  "telephone": "+1-276-285-1392",
-  "email": "thepatriotsplumber@gmail.com",
-  "url": "https://thepatriotsplumber.com",
-  "slogan": "America's #1 Plumbing Service!",
-  "areaServed": ["Abingdon VA","Bristol VA","Emory VA","Meadowview VA","Glade Spring VA","Damascus VA","Saltville VA","Chilhowie VA","Marion VA","Atkins VA","Wytheville VA"],
-  "sameAs": ["https://www.facebook.com/profile.php?id=61584678868541"]
+  "@graph": [
+    {
+      "@type": ["Plumber", "LocalBusiness"],
+      "@id": "https://thepatriotsplumber.com/#business",
+      "name": "The Patriot's Plumber",
+      "alternateName": ["Patriot's Plumbing", "The Patriots Plumber"],
+      "description": "Master Plumber-led, veteran family plumbing company serving the I-81 corridor of Southwest Virginia. Residential and commercial repairs, water heaters, drains and sewer lines, remodels and new construction.",
+      "url": "https://thepatriotsplumber.com/",
+      "telephone": "+1-276-285-1392",
+      "email": "thepatriotsplumber@gmail.com",
+      "image": "https://thepatriotsplumber.com/assets/og.png",
+      "logo": "https://thepatriotsplumber.com/assets/logo-lockup-520.png",
+      "slogan": "America's #1 Plumbing Service!",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Check, Credit Card, Financing",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abingdon",
+        "addressRegion": "VA",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 36.7098, "longitude": -81.9773 },
+      "areaServed": [
+        { "@type": "City", "name": "Abingdon, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Washington County" } },
+        { "@type": "City", "name": "Bristol, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "City of Bristol" } },
+        { "@type": "City", "name": "Emory, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Washington County" } },
+        { "@type": "City", "name": "Meadowview, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Washington County" } },
+        { "@type": "City", "name": "Glade Spring, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Washington County" } },
+        { "@type": "City", "name": "Damascus, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Washington County" } },
+        { "@type": "City", "name": "Saltville, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Smyth County" } },
+        { "@type": "City", "name": "Chilhowie, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Smyth County" } },
+        { "@type": "City", "name": "Marion, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Smyth County" } },
+        { "@type": "City", "name": "Atkins, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Smyth County" } },
+        { "@type": "City", "name": "Wytheville, VA", "containedInPlace": { "@type": "AdministrativeArea", "name": "Wythe County" } }
+      ],
+      "knowsAbout": [
+        "Emergency plumbing repair", "Burst and frozen pipe repair",
+        "Water heater repair and replacement", "Tankless water heaters",
+        "Drain cleaning", "Sewer line repair", "Water line replacement",
+        "Bathroom remodeling", "Kitchen remodeling", "Whole-home repiping",
+        "New construction rough-in", "Sump pumps", "Sewage ejector pumps"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Plumbing services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency plumbing repair", "url": "https://thepatriotsplumber.com/services/emergency-plumber/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water heater repair and replacement", "url": "https://thepatriotsplumber.com/services/water-heater-repair/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drain cleaning and sewer line repair", "url": "https://thepatriotsplumber.com/services/drain-cleaning/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom and kitchen remodeling", "url": "https://thepatriotsplumber.com/services/bathroom-kitchen-remodeling/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "New construction and rough-in plumbing", "url": "https://thepatriotsplumber.com/services/new-construction-plumbing/" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sump and sewage pump installation", "url": "https://thepatriotsplumber.com/services/sump-pump-installation/" } }
+        ]
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61584678868541"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://thepatriotsplumber.com/#website",
+      "url": "https://thepatriotsplumber.com/",
+      "name": "Patriot's Plumbing",
+      "publisher": { "@id": "https://thepatriotsplumber.com/#business" },
+      "inLanguage": "en-US"
+    }
+  ]
 }
 </script>
 </head>
@@ -45,9 +109,9 @@
     <span class="brand__word">Patriot&rsquo;s <em>Plumbing</em></span>
   </a>
   <nav class="nav" id="nav" aria-label="Main">
-    <a href="#services">Services</a>
+    <a href="/services/">Services</a>
+    <a href="/service-area/">Service area</a>
     <a href="#work">Our Work</a>
-    <a href="#why">Why Us</a>
     <a href="#about">About</a>
     <a href="#financing">Financing</a>
   </nav>
@@ -204,39 +268,45 @@
   <div class="services__grid">
     <article class="svc reveal">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 14h8v-4h4l6 6-6 6h-4v-4H6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M26 13v6" stroke="currentColor" stroke-width="1.8"/></svg>
-      <h3>Repairs &amp; emergencies</h3>
+      <h3><a href="/services/emergency-plumber/">Repairs &amp; emergencies</a></h3>
       <p>Burst pipes, active leaks, frozen lines, no-water mornings. Fast, clean, permanent fixes.</p>
       <button class="svc__go" data-problem="Leak or drip">Get help with this</button>
+      <a href="/services/emergency-plumber/" class="svc__more">Full details &rarr;</a>
     </article>
     <article class="svc reveal">
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="10" y="4" width="12" height="22" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 26v3M19 26v3M13 9h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-      <h3>Water heaters</h3>
+      <h3><a href="/services/water-heater-repair/">Water heaters</a></h3>
       <p>Repair or replacement, tank and tankless. Honest advice on when a fix beats a swap.</p>
       <button class="svc__go" data-problem="Water heater">Get help with this</button>
+      <a href="/services/water-heater-repair/" class="svc__more">Full details &rarr;</a>
     </article>
     <article class="svc reveal">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 8c6 0 6 5 11 5s6-5 11-5M5 16c6 0 6 5 11 5s6-5 11-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 21v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-      <h3>Drains, sewer &amp; water lines</h3>
+      <h3><a href="/services/drain-cleaning/">Drains, sewer &amp; water lines</a></h3>
       <p>Stubborn clogs, slow drains, sewer and water line repair &mdash; found and fixed at the source.</p>
       <button class="svc__go" data-problem="Clogged drain">Get help with this</button>
+      <a href="/services/drain-cleaning/" class="svc__more">Full details &rarr;</a>
     </article>
     <article class="svc reveal">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26V12l10-7 10 7v14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 26v-8h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-      <h3>Bath &amp; kitchen remodels</h3>
+      <h3><a href="/services/bathroom-kitchen-remodeling/">Bath &amp; kitchen remodels</a></h3>
       <p>Kitchens, bathrooms and laundry rooms &mdash; shower and tub installs done to last decades.</p>
       <button class="svc__go" data-problem="Remodel or install">Get help with this</button>
+      <a href="/services/bathroom-kitchen-remodeling/" class="svc__more">Full details &rarr;</a>
     </article>
     <article class="svc reveal">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 27V9a4 4 0 0 1 8 0v14a4 4 0 0 0 8 0V5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M21 8l3-3 3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <h3>Rough-ins &amp; new construction</h3>
+      <h3><a href="/services/new-construction-plumbing/">Rough-ins &amp; new construction</a></h3>
       <p>New builds, additions, basement bars and bathrooms &mdash; plumbing planned right from the studs.</p>
       <button class="svc__go" data-problem="Remodel or install">Get help with this</button>
+      <a href="/services/new-construction-plumbing/" class="svc__more">Full details &rarr;</a>
     </article>
     <article class="svc reveal">
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="16" width="20" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 16V6M12 10l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <h3>Sump &amp; sewage pumps</h3>
+      <h3><a href="/services/sump-pump-installation/">Sump &amp; sewage pumps</a></h3>
       <p>Installation and replacement that keeps basements dry and sewage moving the right direction.</p>
       <button class="svc__go" data-problem="Something else">Get help with this</button>
+      <a href="/services/sump-pump-installation/" class="svc__more">Full details &rarr;</a>
     </article>
   </div>
 </section>
@@ -265,21 +335,30 @@
   </header>
   <div class="work__grid">
     <article class="job reveal">
-      <img src="assets/work-remodel.jpg" alt="Fully remodeled white home with a front porch and American flag" loading="lazy" width="970" height="522">
+      <picture>
+        <source srcset="assets/work-remodel.webp" type="image/webp">
+        <img src="assets/work-remodel.jpg" alt="Fully remodeled white home with a front porch and American flag" loading="lazy" width="970" height="522" decoding="async">
+      </picture>
       <div class="job__body">
         <h3>Kelly &amp; Ryan — whole-home remodel</h3>
         <p>A year-long labor of love, showcasing skills learned from my father and a career in the trade.</p>
       </div>
     </article>
     <article class="job reveal">
-      <img src="assets/work-roughin.jpg" alt="Copper stub-outs and fittings staged for a basement bar rough-in" loading="lazy" width="668" height="891">
+      <picture>
+        <source srcset="assets/work-roughin.webp" type="image/webp">
+        <img src="assets/work-roughin.jpg" alt="Copper stub-outs and fittings staged for a basement bar rough-in" loading="lazy" width="668" height="891" decoding="async">
+      </picture>
       <div class="job__body">
         <h3>Theurer family — bar &amp; bath rough-in</h3>
         <p>New supply and drain lines routed for a basement bar sink and vanity, tub roughed in and ready.</p>
       </div>
     </article>
     <article class="job reveal">
-      <img src="assets/work-bathroom.jpg" alt="New subway-tile shower surround and pan installed in a remodeled bathroom" loading="lazy" width="668" height="891">
+      <picture>
+        <source srcset="assets/work-bathroom.webp" type="image/webp">
+        <img src="assets/work-bathroom.jpg" alt="New subway-tile shower surround and pan installed in a remodeled bathroom" loading="lazy" width="668" height="891" decoding="async">
+      </picture>
       <div class="job__body">
         <h3>Bryant bathroom — remodel &amp; repipe</h3>
         <p>New shower and toilet set, plus aging CPVC fittings updated to PEX for the long haul.</p>
@@ -295,7 +374,10 @@
 <section class="section about" id="about">
   <div class="about__inner">
     <figure class="about__art reveal">
-      <img src="assets/logo-lockup-520.png" alt="Patriot's Plumbing — eagle emblem holding a pipe wrench and hammer" width="520" height="610" loading="lazy">
+      <picture>
+        <source srcset="assets/logo-lockup-520.webp" type="image/webp">
+        <img src="assets/logo-lockup-520.png" alt="Patriot's Plumbing — eagle emblem holding a pipe wrench and hammer" width="520" height="610" loading="lazy" decoding="async">
+      </picture>
     </figure>
     <div class="about__copy reveal">
       <p class="eyebrow">Our story</p>
@@ -307,10 +389,10 @@
       or hiking with our dog Copper.</p>
       <p>That&rsquo;s who shows up at your door: a neighbor with a license, a guarantee, and a reason to do it right.</p>
       <div class="about__area">
-        <h3>Where we work</h3>
+        <h3><a href="/service-area/">Where we work</a></h3>
         <ul class="towns">
-          <li>Abingdon</li><li>Bristol</li><li>Emory</li><li>Meadowview</li><li>Glade Spring</li>
-          <li>Damascus</li><li>Saltville</li><li>Chilhowie</li><li>Marion</li><li>Atkins</li><li>Wytheville</li>
+          <li><a href="/plumber/abingdon-va/">Abingdon</a></li><li><a href="/plumber/bristol-va/">Bristol</a></li><li>Emory</li><li>Meadowview</li><li><a href="/plumber/glade-spring-va/">Glade Spring</a></li>
+          <li>Damascus</li><li>Saltville</li><li>Chilhowie</li><li><a href="/plumber/marion-va/">Marion</a></li><li>Atkins</li><li><a href="/plumber/wytheville-va/">Wytheville</a></li>
         </ul>
         <p class="fine">Close but not on the list? <button class="linklike" data-open-chat>Ask us</button> — we may still cover you.</p>
       </div>

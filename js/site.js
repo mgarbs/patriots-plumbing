@@ -12,8 +12,14 @@
   // Progressive enhancement flag: reveal-on-scroll only engages when JS runs.
   document.body.classList.add('js');
 
-  // Warm the free-tier API the moment anyone lands on the page.
-  try { fetch(API_BASE + '/api/health').catch(function () {}); } catch (e) {}
+  // Warm the free-tier API — it cold-starts, so we still want this early, but
+  // not competing with fonts/CSS for the first paint. Idle callback with a hard
+  // timeout so it always fires well before anyone can fill out the form.
+  var warm = function () {
+    try { fetch(API_BASE + '/api/health').catch(function () {}); } catch (e) {}
+  };
+  if ('requestIdleCallback' in window) { requestIdleCallback(warm, { timeout: 2000 }); }
+  else { setTimeout(warm, 1200); }
 
   /* ======================== nav ======================== */
 
@@ -42,6 +48,15 @@
       });
     }, { threshold: 0.12 });
     revealEls.forEach(function (el) { io.observe(el); });
+
+    // Failsafe: .reveal starts at opacity 0, so if the observer never fires the
+    // page would render blank. That happens for real — a backgrounded or
+    // non-compositing tab skips rendering steps entirely, and some crawler
+    // renderers behave the same way. Anything still hidden after 1.5s gets
+    // shown unconditionally. Costs nothing when the observer works normally.
+    setTimeout(function () {
+      revealEls.forEach(function (el) { el.classList.add('is-in'); });
+    }, 1500);
   } else {
     revealEls.forEach(function (el) { el.classList.add('is-in'); });
   }

@@ -863,3 +863,200 @@ body.js .reveal.is-in { opacity: 1; transform: none; }
   .lead-card { padding: 20px 18px 18px; }
   .brand__word { font-size: 22px; }
 }
+
+/* ==========================================================================
+   Generated SEO pages — service, city and hub layouts.
+   Additive only: reuses the tokens, .btn, .hero, .section and .footer rules
+   above. Nothing here overrides homepage behaviour.
+   ========================================================================== */
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(18px, 4vw, 40px);
+}
+
+/* Page hero — same furniture as the homepage hero, less vertical drama so the
+   content starts higher on a landing page. */
+.hero--page { padding-block: clamp(28px, 5vw, 56px) clamp(36px, 6vw, 72px); }
+.hero--page h1 { font-size: clamp(36px, 4.6vw, 58px); }
+.hero--page .hero__sub { max-width: 46ch; }
+
+/* -------------------------------------------------------------- breadcrumbs */
+
+.crumbs { padding: 22px 0 4px; }
+.crumbs ol {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 6px 10px; list-style: none;
+  font-size: 13.5px; color: var(--muted);
+}
+.crumbs li + li::before {
+  content: "/"; margin-right: 10px; color: var(--line);
+}
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--red); text-decoration: underline; }
+.crumbs [aria-current="page"] { color: var(--ink); font-weight: 600; }
+
+/* ------------------------------------------------------------------ article */
+
+.article {
+  max-width: 74ch;
+  margin: 0 auto;
+  padding: clamp(20px, 3vw, 34px) 0 clamp(48px, 7vw, 88px);
+}
+
+.prose + .prose { margin-top: clamp(34px, 4.4vw, 54px); }
+
+.prose h2 {
+  font-size: clamp(26px, 3vw, 36px);
+  margin-bottom: 16px;
+  color: var(--navy);
+}
+.prose p { margin-bottom: 16px; color: #23324c; }
+.prose p:last-child { margin-bottom: 0; }
+.prose a { color: var(--red); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+.prose a:hover { color: var(--red-700); }
+
+.prose .lede {
+  font-size: clamp(17.5px, 1.5vw, 19.5px);
+  line-height: 1.62;
+  color: var(--ink);
+}
+
+/* Numbered "what the symptom means" lists. */
+.steps { list-style: none; counter-reset: step; }
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 0 0 18px 52px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  color: #23324c;
+}
+.steps li:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -2px;
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--navy); color: #fff;
+  font-family: var(--font-display); font-weight: 700; font-size: 17px;
+}
+.steps strong { color: var(--navy); display: block; margin-bottom: 3px; }
+
+/* ---------------------------------------------------------------- link grids */
+
+.linkgrid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px 18px;
+  margin-top: 6px;
+}
+.linkgrid li { margin: 0; }
+.linkgrid > li > a {
+  display: block; padding: 11px 14px;
+  border: 1px solid var(--line); border-radius: 10px;
+  background: var(--white); color: var(--navy);
+  text-decoration: none; font-weight: 600;
+  transition: border-color .16s ease, transform .16s ease, box-shadow .16s ease;
+}
+.linkgrid > li > a:hover {
+  border-color: var(--red); transform: translateY(-1px);
+  box-shadow: var(--shadow-md); color: var(--red);
+}
+.linkgrid__plain {
+  display: block; padding: 11px 14px;
+  border: 1px dashed var(--line); border-radius: 10px;
+  color: var(--muted); font-weight: 500;
+}
+
+.linkgrid--cards > li > a { padding: 15px 17px; }
+.linkgrid--cards strong {
+  display: block; font-family: var(--font-display);
+  text-transform: uppercase; letter-spacing: .02em;
+  font-size: 18px; margin-bottom: 5px;
+}
+.linkgrid--cards span {
+  display: block; font-weight: 400; font-size: 14.5px;
+  line-height: 1.5; color: var(--muted);
+}
+.linkgrid--big { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+
+/* ---------------------------------------------------------------------- FAQ */
+
+.faq__list { border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  cursor: pointer; list-style: none;
+  padding: 17px 40px 17px 0; position: relative;
+  font-family: var(--font-display); text-transform: uppercase;
+  letter-spacing: .02em; font-size: 18px; font-weight: 600;
+  color: var(--navy);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; position: absolute; right: 8px; top: 50%;
+  width: 10px; height: 10px; margin-top: -7px;
+  border-right: 2px solid var(--red); border-bottom: 2px solid var(--red);
+  transform: rotate(45deg); transition: transform .18s ease;
+}
+.faq details[open] summary::after { transform: rotate(-135deg); margin-top: -3px; }
+.faq summary:hover { color: var(--red); }
+.faq details p { padding: 0 0 18px; margin: 0; color: #23324c; }
+
+/* ------------------------------------------------------------------- footer */
+
+.footer__inner--wide {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+  gap: 28px 32px;
+  align-items: start;
+}
+.footer__h {
+  display: block; margin-bottom: 10px;
+  font-family: var(--font-display); text-transform: uppercase;
+  letter-spacing: .04em; font-size: 15px; color: var(--gold);
+}
+.footer__inner--wide .footer__col { display: flex; flex-direction: column; gap: 7px; }
+
+@media (max-width: 860px) {
+  .footer__inner--wide { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .footer__inner--wide { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------- perf hints */
+
+/* NOTE: content-visibility:auto was tried here and deliberately removed.
+   It skips rendering for offscreen sections, which also drops them out of
+   innerText and puts their indexing at the mercy of how a crawler renders.
+   These pages exist to be indexed and are small enough that the perf win was
+   negligible. Not worth any indexing risk. */
+
+@media (prefers-reduced-motion: reduce) {
+  .linkgrid > li > a { transition: none; }
+  .linkgrid > li > a:hover { transform: none; }
+  .faq summary::after { transition: none; }
+}
+
+/* Homepage additions: service-card deep link + <picture> wrappers ------------ */
+
+.job picture, .about__art picture { display: block; }
+
+.svc h3 a { color: inherit; text-decoration: none; }
+.svc h3 a:hover { color: var(--red); }
+
+.svc__more {
+  display: inline-block; margin-top: 10px;
+  font-size: 14px; font-weight: 600; color: var(--red);
+  text-decoration: none;
+}
+.svc__more:hover { text-decoration: underline; }
+
+.about__area h3 a { color: inherit; text-decoration: none; }
+.about__area h3 a:hover { color: var(--red); }
+.towns a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+.towns a:hover { color: var(--red); border-bottom-color: var(--red); }
