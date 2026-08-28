@@ -84,7 +84,7 @@ module.exports = [
     { h2: 'Wells, hard water and water heaters', kind: 'prose', body: [
       'If you are on a well anywhere in Smyth County, your water heater is working harder than its label suggests. Hard water lays sediment on the tank floor, which insulates the burner and steals capacity, and it consumes the anode rod faster than municipal water does. The practical result is that heaters here often fail years earlier than they should &mdash; and almost always avoidably.',
       'An annual flush and an anode check is the cheapest maintenance in the house. If your hot water runs out faster than it used to, or the tank pops and rumbles when it fires, that is sediment talking and it is usually recoverable.',
-      'The other well-related call is pressure: a failing pressure tank or pump produces symptoms that look like a supply leak but are not. Diagnosing which one you have before anyone starts digging saves real money.',
+      'One honest boundary worth knowing: the well equipment itself &mdash; the pump, the pressure tank, the wellhead &mdash; is a well contractor&rsquo;s trade, not ours. We work on the house side of it. If your pressure has dropped and you are not sure which side the fault is on, call us anyway; telling you plainly that you need a well contractor costs you nothing and saves you a wasted visit.',
     ]},
     { h2: 'Septic versus sewer', kind: 'prose', body: [
       'A backup on a septic property can be a plumbing problem or a tank problem, and they have completely different fixes and completely different costs. We diagnose which side of the tank the trouble is on first. It is a short conversation that regularly saves people from paying to solve the wrong problem.',
@@ -95,7 +95,7 @@ module.exports = [
   ],
   faqs: [
     ['Do you come out to Marion?', 'Yes, regularly &mdash; along with Chilhowie, Atkins and Saltville. Call (276) 285-1392 and we will give you an honest answer about timing.'],
-    ['I am on a well and my water pressure dropped. Is that a leak?', 'Not necessarily. A failing pressure tank or well pump produces very similar symptoms to a supply-side leak. It is worth diagnosing properly before assuming the worst, because the fixes are completely different.'],
+    ['I am on a well and my water pressure dropped. Do you handle that?', 'Partly. If the fault is in your house plumbing &mdash; a supply leak, a failing valve, corroded lines &mdash; that is our work. If it is the well pump or the pressure tank, that is a well contractor&rsquo;s trade and we would send you to one rather than guess at it. Call and describe what you are seeing; we will tell you honestly which it is.'],
     ['Do you work on septic systems?', 'We diagnose whether a backup is on the plumbing side or the tank side, and we handle the plumbing side. Knowing which one you have is the important first step.'],
   ],
   localProof: [],
@@ -114,7 +114,8 @@ module.exports = [
   ],
   local: [
     { h2: 'Well and septic country', kind: 'prose', body: [
-      'The dominant pattern in Wythe County is private water supply, and it produces a distinct set of calls. Pressure problems that turn out to be a waterlogged pressure tank rather than a leak. Water heaters cut short by hard-water sediment and consumed anode rods. Long buried service runs between a wellhead and a house, where a leak can go unnoticed for months because there is no water bill to spike.',
+      'The dominant pattern in Wythe County is private water supply, and it changes what goes wrong. Water heaters cut short by hard-water sediment and consumed anode rods. Long buried service runs between a wellhead and a house, where a leak can go unnoticed for months because there is no water bill to spike. Supply lines and fixtures aging faster than they would on treated municipal water.',
+      'We do not service the well equipment itself &mdash; pumps, pressure tanks and wellheads are a well contractor&rsquo;s trade. Everything from the house side of that onward is ours, and if you are not sure which side your problem is on, that is exactly the kind of question worth a phone call before anyone spends money.',
       'On the drainage side, septic changes the diagnostic order entirely. Before anyone excavates anything, the question is whether the trouble is upstream or downstream of the tank &mdash; because those are different jobs with very different costs.',
     ]},
     { h2: 'Freeze exposure is higher out here', kind: 'prose', body: [
@@ -127,7 +128,7 @@ module.exports = [
   ],
   faqs: [
     ['Do you really come all the way to Wytheville?', 'Yes. It is the far end of our service area, roughly an hour from Abingdon, and we will always tell you honestly what our timing looks like before you commit to anything.'],
-    ['My water pressure is bad and I am on a well. Where do we start?', 'With the pressure tank and pump, before assuming a leak. Waterlogged tanks and failing pumps mimic supply leaks closely, and confirming which one you have first avoids paying to dig up a line that is fine.'],
+    ['My water pressure is bad and I am on a well. Where do we start?', 'By working out whether the fault is the well equipment or your house plumbing, because they are different trades. Pumps and pressure tanks are a well contractor&rsquo;s job and we would refer you rather than guess. Leaks, failing valves and corroded supply lines inside the house are ours. Describe what you are seeing and we will point you the right way.'],
     ['Can you plumb a shop or outbuilding?', 'Yes &mdash; supply lines to garages, shops and outbuildings are normal work for us, including planning the run so it survives a Wythe County winter.'],
   ],
   localProof: [],

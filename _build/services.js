@@ -32,7 +32,7 @@ module.exports = [
       'Sewer and drain backups, including main line stoppages',
       'Failed sump and sewage pumps with water rising',
       'Toilets and fixtures that will not stop running or have broken free',
-      'No-water calls &mdash; well pump, pressure tank and supply-side diagnosis',
+      'No-water calls &mdash; supply-side diagnosis on the house plumbing (well pumps and pressure tanks are a well contractor&rsquo;s trade)',
     ]},
     { h2: 'Why pipes fail here specifically', kind: 'prose', body: [
       'The I-81 corridor is a crawlspace-heavy housing market at elevation, and that combination produces a predictable winter pattern. Supply lines run through vented crawlspaces that were insulated for a milder climate than the one that actually arrives in January. A hard freeze reaches the pipe, the ice expands, and the split does not announce itself until the thaw pushes water through it.',
