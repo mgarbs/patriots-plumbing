@@ -586,7 +586,7 @@ function renderServicesHub() {
   const trail = [{ name: 'Home', path: '/' }, { name: 'Services', path: '/services/' }];
   const title = 'Plumbing Services in Abingdon &amp; SW Virginia';
   const meta =
-    'Emergency repairs, water heaters, drains and sewer lines, remodels, new construction rough-ins and sump pumps across Washington, Smyth and Wythe counties.';
+    'Urgent repairs, water heaters, drains and sewer lines, remodels, new construction rough-ins and sump pumps across Washington, Smyth and Wythe counties.';
 
   const schema = {
     '@context': 'https://schema.org',
@@ -747,7 +747,7 @@ ${countyBlocks}
       <li><strong>Where you are.</strong> Town and whether you are on town water and sewer or a well and septic. That one answer changes the diagnosis more than anything else you can tell us.</li>
       <li><strong>What you are seeing.</strong> Not what you think is wrong &mdash; what you can actually observe. Where the water is, what it sounds like, when it started, whether it is getting worse.</li>
       <li><strong>A photo, if you can.</strong> A photo saves a trip. Snap the leak, the water heater&rsquo;s data plate, the puddle, the fitting. You can send them straight through the request form on this page.</li>
-      <li><strong>Whether it is an emergency.</strong> Be straight with us and we will be straight with you about where you sit in the day. An active leak and a slow drain are different calls.</li>
+      <li><strong>How urgent it is.</strong> Be straight with us and we will be straight with you about where you sit in the day. An active leak and a slow drain are different calls.</li>
     </ol>
   </section>
 

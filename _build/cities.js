@@ -160,7 +160,7 @@ module.exports = [
   faqs: [
     ['Do you cover Meadowview and Emory too?', 'Yes, along with Damascus, Chilhowie and Saltville. Glade Spring is close to our base so this whole stretch is easy for us to reach.'],
     ['I am on a well. Does that change water heater maintenance?', 'Considerably. Hard well water lays sediment in the tank and consumes the anode rod faster, which shortens heater life. An annual flush and anode check makes a real difference.'],
-    ['Can you run a water line to a barn or shop?', 'Yes, and we will plan the run and the insulation so it survives winter rather than becoming next January&rsquo;s emergency.'],
+    ['Can you run a water line to a barn or shop?', 'Yes, and we will plan the run and the insulation so it survives winter rather than becoming next January&rsquo;s repair.'],
   ],
   localProof: [],
 },
