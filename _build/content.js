@@ -48,6 +48,9 @@ const TOWNS = [
   { name: 'Chilhowie',    slug: 'chilhowie-va',    county: 'Smyth County',      page: true,
     lat: 36.7987, lng: -81.6820 },
   { name: 'Atkins',       slug: null, county: 'Smyth County',      page: false },
+  { name: 'Independence', slug: null, county: 'Grayson County',    page: false },
+  { name: 'Troutdale',    slug: null, county: 'Grayson County',    page: false },
+  { name: 'Fries',        slug: null, county: 'Grayson County',    page: false },
 ];
 
 module.exports = { BIZ, TOWNS };

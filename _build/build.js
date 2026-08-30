@@ -459,7 +459,7 @@ ${faqBlock(s.faqs)}
 
   <section class="prose reveal">
     <h2>Where we do this work</h2>
-    <p>We cover the I-81 corridor across Washington, Smyth and Wythe counties. Towns with their own page:</p>
+    <p>We cover the I-81 corridor across Washington, Smyth, Wythe and Grayson counties. Towns with their own page:</p>
     <ul class="linkgrid">
 ${pageTowns.map((t) => `      <li><a href="${townLink(t)}">Plumber in ${t.name}, VA</a></li>`).join('\n')}
     </ul>
@@ -588,7 +588,7 @@ function renderServicesHub() {
   const trail = [{ name: 'Home', path: '/' }, { name: 'Services', path: '/services/' }];
   const title = 'Plumbing Services in Abingdon &amp; SW Virginia';
   const meta =
-    'Urgent repairs, water heaters, drains and sewer lines, remodels, new construction rough-ins and sump pumps across Washington, Smyth and Wythe counties.';
+    'Urgent repairs, water heaters, drains and sewer lines, remodels, new construction rough-ins and sump pumps across Washington, Smyth, Wythe and Grayson counties.';
 
   const schema = {
     '@context': 'https://schema.org',
@@ -621,7 +621,7 @@ ${pageHero(
 ${crumbs(trail)}
 <article class="article">
   <section class="prose reveal">
-    <p class="lede">We are a Master Plumber&ndash;led shop serving Washington, Smyth and Wythe counties. Everything below is work we do ourselves &mdash; residential and commercial, repair and remodel.</p>
+    <p class="lede">We are a Master Plumber&ndash;led shop serving Washington, Smyth, Wythe and Grayson counties. Everything below is work we do ourselves &mdash; residential and commercial, repair and remodel.</p>
   </section>
   <section class="prose reveal">
     <ul class="linkgrid linkgrid--cards linkgrid--big">
@@ -673,7 +673,7 @@ function renderAreaHub() {
   const trail = [{ name: 'Home', path: '/' }, { name: 'Service area', path: '/service-area/' }];
   const title = 'Service Area | Plumber for Abingdon, Bristol &amp; Marion, VA';
   const meta =
-    'We cover Abingdon, Bristol, Marion, Wytheville, Glade Spring, Damascus, Chilhowie and Saltville across Washington, Smyth and Wythe counties.';
+    'We cover Abingdon, Bristol, Marion, Wytheville, Glade Spring, Damascus, Chilhowie and Saltville across Washington, Smyth, Wythe and Grayson counties.';
 
   const byCounty = {};
   TOWNS.forEach((t) => {
@@ -728,7 +728,7 @@ ${pageHero(
 ${crumbs(trail)}
 <article class="article">
   <section class="prose reveal">
-    <p class="lede">We are licensed in Virginia and we work the I-81 corridor &mdash; Washington, Smyth and Wythe counties and the City of Bristol. Abingdon and Bristol are where we do most of our work, and we cover the rest of the corridor from there.</p>
+    <p class="lede">We are licensed in Virginia and we work the I-81 corridor &mdash; Washington, Smyth, Wythe and Grayson counties and the City of Bristol. Abingdon and Bristol are where we do most of our work, and we cover the rest of the corridor from there.</p>
     <p>Close but not on this list? <button class="linklike" data-open-chat>Ask us</button> &mdash; we may still cover you, and if we do not we will tell you rather than waste your time.</p>
   </section>
 ${countyBlocks}

@@ -21,7 +21,14 @@ function walk(dir, acc = []) {
 const rel = (p) => path.relative(ROOT, p).split(path.sep).join('/');
 const pick = (h, re) => { const m = h.match(re); return m ? m[1] : ''; };
 
-const files = walk(ROOT).filter((f) => !/404\.html$/.test(f));
+// 404 isn't a content page, and google*.html is Search Console's ownership
+// verification file — neither should be audited as site content.
+const files = walk(ROOT).filter((f) => {
+  const base = path.basename(f);
+  // 404 isn't a content page; google<hex>.html is Search Console's ownership
+  // verification file. Neither should be audited as site content.
+  return base !== '404.html' && !/^google[0-9a-f]+\.html$/.test(base);
+});
 const pages = [];
 const problems = [];
 const linkedTo = new Set();

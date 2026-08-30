@@ -13,7 +13,7 @@ module.exports = [
   problem: 'Leak or drip',
   lead: 'Water where it should not be. Here is what to do in the first two minutes, and how we handle it when we get there.',
   intro: [
-    'Most of the urgent calls we take in Washington, Smyth and Wythe counties fall into a short list: a supply line that let go in a crawlspace, a water heater that finally split, a frozen pipe that thawed into a flood, or a drain backing up into a finished basement. All of them get worse by the hour, and most of them are made dramatically cheaper by two minutes of the right action before anyone arrives.',
+    'Most of the urgent calls we take in Washington, Smyth, Wythe and Grayson counties fall into a short list: a supply line that let go in a crawlspace, a water heater that finally split, a frozen pipe that thawed into a flood, or a drain backing up into a finished basement. All of them get worse by the hour, and most of them are made dramatically cheaper by two minutes of the right action before anyone arrives.',
     'We are a Master Plumber-led shop, not a call center that dispatches whoever is closest. When you call, you are talking to the people who will actually do the work.',
   ],
   firstBlock: {
@@ -135,7 +135,7 @@ module.exports = [
       'Roots are the reason a lot of homes here have a &ldquo;spring clog.&rdquo; The line is fine in the dry months and closes up when the trees wake up. Cutting them clears it; repairing the joint is what actually ends it.',
     ]},
     { h2: 'Septic systems', kind: 'prose', body: [
-      'Plenty of properties in rural Washington, Smyth and Wythe counties are on septic rather than municipal sewer, and a backup there can be a plumbing problem or a tank problem. The distinction matters because they have completely different fixes. We will diagnose which side of the tank the trouble is on before anyone starts digging.',
+      'Plenty of properties in rural Washington, Smyth, Wythe and Grayson counties are on septic rather than municipal sewer, and a backup there can be a plumbing problem or a tank problem. The distinction matters because they have completely different fixes. We will diagnose which side of the tank the trouble is on before anyone starts digging.',
     ]},
   ],
   faqs: [
@@ -231,7 +231,7 @@ module.exports = [
     ['Do you work with builders and general contractors?', 'Yes. Call with the project and the timeline and we will tell you honestly whether we can hit your schedule.'],
     ['Do you do commercial work?', 'Yes &mdash; we handle commercial plumbing repairs and installations alongside residential.'],
     ['Can you plumb a basement bathroom below the sewer line?', 'Yes, with a sewage ejector system and proper venting. It is a normal part of a basement build; it just has to be designed in rather than added on.'],
-    ['Do you pull permits?', 'Permitting varies by jurisdiction across Washington, Smyth and Wythe counties and the City of Bristol. We will tell you what your specific project needs before work starts.'],
+    ['Do you pull permits?', 'Permitting varies by jurisdiction across Washington, Smyth, Wythe and Grayson counties and the City of Bristol. We will tell you what your specific project needs before work starts.'],
   ],
 },
 {
