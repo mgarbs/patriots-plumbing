@@ -46,8 +46,11 @@ function head(p) {
 <title>${p.title}</title>
 <meta name="description" content="${p.meta}">
 <link rel="canonical" href="${canonical}">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/eagle-32.png">
-<link rel="apple-touch-icon" href="/assets/eagle-180.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/icon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/icon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/icon-192.png">
 <meta property="og:title" content="${p.title}">
 <meta property="og:description" content="${p.meta}">
 <meta property="og:image" content="${url('/assets/og.png')}">
