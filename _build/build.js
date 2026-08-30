@@ -511,7 +511,6 @@ function renderCity(c) {
           name: c.town + ', VA',
           containedInPlace: { '@type': 'AdministrativeArea', name: c.county },
         },
-        geo: town && town.lat ? { '@type': 'GeoCoordinates', latitude: town.lat, longitude: town.lng } : undefined,
       },
       faqSchema(c.faqs),
     ],
@@ -726,7 +725,7 @@ ${pageHero(
 ${crumbs(trail)}
 <article class="article">
   <section class="prose reveal">
-    <p class="lede">We are licensed in Virginia and based in Abingdon. Our regular territory runs the interstate corridor across three counties and the City of Bristol &mdash; roughly an hour in each direction from home base.</p>
+    <p class="lede">We are licensed in Virginia and we work the I-81 corridor &mdash; Washington, Smyth and Wythe counties and the City of Bristol. Abingdon and Bristol are where we do most of our work, and we cover the rest of the corridor from there.</p>
     <p>Close but not on this list? <button class="linklike" data-open-chat>Ask us</button> &mdash; we may still cover you, and if we do not we will tell you rather than waste your time.</p>
   </section>
 ${countyBlocks}
@@ -737,7 +736,7 @@ ${countyBlocks}
 
   <section class="prose reveal">
     <h2>How far we go, and why this stretch</h2>
-    <p>Our territory follows I-81 for a practical reason: it is the road that makes a one-hour radius actually workable. From Abingdon we can reach Bristol in about fifteen minutes, Glade Spring in ten, Marion in half an hour and Wytheville in around an hour &mdash; and because it is interstate the whole way, those times hold up in weather that would make a back-roads route unreliable.</p>
+    <p>Our territory follows I-81 for a practical reason: it is the road that makes covering this much ground actually workable. Abingdon, Bristol and Glade Spring sit close together at one end, with Marion, Chilhowie and Wytheville strung along the interstate from there &mdash; and because it is interstate the whole way, our timings hold up in weather that would make a back-roads route unreliable.</p>
     <p>We would rather cover a corridor properly than claim a map we cannot serve. If you are past Wytheville, or over the Tennessee line, we will tell you honestly rather than book a visit we cannot do well.</p>
   </section>
 

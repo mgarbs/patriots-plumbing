@@ -38,7 +38,7 @@ module.exports = [
   ],
   faqs: [
     ['Do you work on rental property in Emory?', 'Yes, and turnovers are a sensible time to do it. Looking at a whole unit between tenants costs far less than a year of individual call-outs, and it stops small problems being discovered by the next tenant.'],
-    ['How quickly can you get to Emory?', 'Quickly &mdash; it is a few minutes from our base in Abingdon, so this is among the easiest areas we cover. Call (276) 285-1392 and we will tell you honestly where you sit in the day.'],
+    ['How quickly can you get to Emory?', 'Quickly &mdash; Emory sits just off the interstate between Abingdon and Glade Spring, so it is among the easiest areas we cover. Call (276) 285-1392 and we will tell you honestly where you sit in the day.'],
     ['My hot water is worse than my cold. Why?', 'In an older house that usually points at galvanized supply on the hot side, which corrodes inward and restricts flow. It is worth diagnosing, because it does not improve on its own and it eventually leaks.'],
   ],
   localProof: [],

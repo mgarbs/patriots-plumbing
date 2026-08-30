@@ -17,7 +17,7 @@ module.exports = [
   title: 'Plumber in Abingdon, VA — Repairs, Water Heaters & Remodels',
   meta: 'Master Plumber-led plumbing in Abingdon, Virginia. Urgent repairs, water heaters, drains and remodels in the historic district and throughout Washington County.',
   h1: 'Plumber in Abingdon, Virginia',
-  lead: 'Abingdon is home base. It is also the town where we most often open a wall and find something older than the house&rsquo;s last three owners.',
+  lead: 'One of the two towns we work in most &mdash; and the one where we most often open a wall and find something older than the house&rsquo;s last three owners.',
   intro: [
     'Abingdon has one of the best-preserved historic districts in Southwest Virginia, and that is a genuine pleasure to work in &mdash; but it makes plumbing here its own discipline. A significant share of the housing stock in and around the district predates modern plumbing entirely, which means the system you have today is really three or four eras of work layered on top of each other. Original cast iron drain lines, galvanized supply added later, a 1970s bathroom, a 1990s CPVC repair, and a water heater installed by someone who has since moved away.',
     'That layering is why we diagnose before we quote in this town. What looks like a simple fixture replacement on Main Street can turn into a supply line that will not take a new valve, and it is far better to know that on the first visit.',
@@ -35,7 +35,7 @@ module.exports = [
   faqs: [
     ['Do you work in the Abingdon historic district?', 'Yes, and regularly. Older homes need more planning and more care with access, which is exactly why we diagnose thoroughly before quoting rather than after starting.'],
     ['Can you handle a whole-home repipe?', 'Yes. On homes with original galvanized supply it is often the right long-term answer, and a remodel is the cheapest moment to do it since the walls are already open.'],
-    ['How fast can you get here?', 'Abingdon is our home base, so this is the fastest area we cover. Call (276) 285-1392 and we will tell you honestly where you sit in the day.'],
+    ['How fast can you get here?', 'Abingdon is one of the areas we cover most often, so it is among the quickest for us to reach. Call (276) 285-1392 and we will tell you honestly where you sit in the day.'],
   ],
   localProof: [],
 },
@@ -90,7 +90,7 @@ module.exports = [
       'A backup on a septic property can be a plumbing problem or a tank problem, and they have completely different fixes and completely different costs. We diagnose which side of the tank the trouble is on first. It is a short conversation that regularly saves people from paying to solve the wrong problem.',
     ]},
     { h2: 'Distance is real, so plan ahead where you can', kind: 'prose', body: [
-      'Marion is roughly half an hour up I-81 from our base in Abingdon, and we cover it regularly. Call and we will tell you straight where you sit in the day. For anything that can wait &mdash; a heater on its last legs, a drain that has been slow for months, a remodel you are planning &mdash; booking ahead gets you a much better slot than waiting for it to become urgent.'
+      'Marion sits right on our regular I-81 run and we cover it constantly. Call and we will tell you straight where you sit in the day. For anything that can wait &mdash; a heater on its last legs, a drain that has been slow for months, a remodel you are planning &mdash; booking ahead gets you a much better slot than waiting for it to become urgent.'
     ]},
   ],
   faqs: [
@@ -110,7 +110,7 @@ module.exports = [
   lead: 'The far end of our territory, and the most rural &mdash; which changes what tends to go wrong.',
   intro: [
     'Wytheville sits where I-81 and I-77 meet, and Wythe County is the most rural part of the area we cover. That matters more than it sounds like it should. Rural means a much higher proportion of properties on private wells and septic systems, longer service lines between the source and the house, outbuildings and shops that need their own supply, and a genuine premium on getting a diagnosis right the first time rather than making three trips.',
-    'It is a real drive from our base in Abingdon &mdash; roughly an hour up the interstate &mdash; and we would rather be straightforward about that than pretend otherwise. We cover Wytheville, and we will always tell you honestly what our timing looks like before you commit.',
+    'It is the far end of our run up the interstate, and we would rather be straightforward about that than pretend otherwise. We cover Wytheville, and we will always tell you honestly what our timing looks like before you commit.',
   ],
   local: [
     { h2: 'Well and septic country', kind: 'prose', body: [
@@ -127,7 +127,7 @@ module.exports = [
     ]},
   ],
   faqs: [
-    ['Do you really come all the way to Wytheville?', 'Yes. It is the far end of our service area, roughly an hour from Abingdon, and we will always tell you honestly what our timing looks like before you commit to anything.'],
+    ['Do you really come all the way to Wytheville?', 'Yes. It is the far end of our service area, and we will always tell you honestly what our timing looks like before you commit to anything.'],
     ['My water pressure is bad and I am on a well. Where do we start?', 'By working out whether the fault is the well equipment or your house plumbing, because they are different trades. Pumps and pressure tanks are a well contractor&rsquo;s job and we would refer you rather than guess. Leaks, failing valves and corroded supply lines inside the house are ours. Describe what you are seeing and we will point you the right way.'],
     ['Can you plumb a shop or outbuilding?', 'Yes &mdash; supply lines to garages, shops and outbuildings are normal work for us, including planning the run so it survives a Wythe County winter.'],
   ],
@@ -142,7 +142,7 @@ module.exports = [
   h1: 'Plumber in Glade Spring, Virginia',
   lead: 'Ten minutes up the interstate from us, and the gateway to the rural half of Washington County.',
   intro: [
-    'Glade Spring is close enough to our base in Abingdon that we cover it easily, and it is the natural hub for the surrounding rural stretch &mdash; Meadowview, Emory and the farmland in between. The town itself is compact and older; the properties around it run quickly into wells, septic systems, farmhouses and outbuildings.',
+    'Glade Spring sits between Abingdon and Chilhowie on the interstate, so we cover it easily, and it is the natural hub for the surrounding rural stretch &mdash; Meadowview, Emory and the farmland in between. The town itself is compact and older; the properties around it run quickly into wells, septic systems, farmhouses and outbuildings.',
     'It is a small town, which means word travels. That is a reasonable incentive to do the job right, and it happens to be how we prefer to work anyway.',
   ],
   local: [
@@ -158,7 +158,7 @@ module.exports = [
     ]},
   ],
   faqs: [
-    ['Do you cover Meadowview and Emory too?', 'Yes, along with Damascus, Chilhowie and Saltville. Glade Spring is close to our base so this whole stretch is easy for us to reach.'],
+    ['Do you cover Meadowview and Emory too?', 'Yes, along with Damascus, Chilhowie and Saltville. Glade Spring sits in the middle of that stretch, so the whole area is easy for us to reach.'],
     ['I am on a well. Does that change water heater maintenance?', 'Considerably. Hard well water lays sediment in the tank and consumes the anode rod faster, which shortens heater life. An annual flush and anode check makes a real difference.'],
     ['Can you run a water line to a barn or shop?', 'Yes, and we will plan the run and the insulation so it survives winter rather than becoming next January&rsquo;s repair.'],
   ],
