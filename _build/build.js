@@ -91,7 +91,7 @@ function header() {
     <a href="/services/">Services</a>
     <a href="/service-area/">Service area</a>
     <a href="/#work">Our Work</a>
-    <a href="/#about">About</a>
+    <a href="/about-us/">About</a>
     <a href="/#financing">Financing</a>
   </nav>
   <div class="header__actions">
@@ -773,6 +773,106 @@ ${footer()}`;
   return head({ path: '/service-area/', title, meta, schema }) + body;
 }
 
+/* ------------------------------------------------------------ about page */
+/* /about-us/ existed on the old design.com site and is still in Google's index;
+   the rebuild dropped it, leaving an indexed URL returning 404. Rebuilding it
+   recovers that URL and gives the site a real E-E-A-T page: who holds the
+   license, what the two business names mean, and what the guarantee covers. */
+
+function renderAbout() {
+  const trail = [{ name: 'Home', path: '/' }, { name: 'About', path: '/about-us/' }];
+  const title = 'About Patriot&rsquo;s Plumbing &mdash; Master Plumber, SWVA';
+  const meta =
+    'A Master Plumber-led plumbing shop serving Washington, Smyth, Wythe and Grayson counties. Licensed, insured, and every job guaranteed.';
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      crumbSchema(trail),
+      {
+        '@type': 'AboutPage',
+        '@id': url('/about-us/') + '#about',
+        name: 'About ' + toText(BIZ.altName),
+        url: url('/about-us/'),
+        mainEntity: { '@id': PLACE_ID },
+      },
+      {
+        '@type': 'Person',
+        '@id': BIZ.origin + '/#bill',
+        name: 'Bill',
+        jobTitle: 'Master Plumber',
+        alumniOf: { '@type': 'CollegeOrUniversity', name: 'Emory & Henry' },
+        worksFor: { '@id': PLACE_ID },
+      },
+    ],
+  };
+
+  const body = `
+${header()}
+<main>
+${pageHero(
+    'Who we are',
+    'About Patriot&rsquo;s Plumbing',
+    'A Master Plumber&ndash;led shop in Southwest Virginia &mdash; small enough that the person who quotes the job is the person who does it.',
+    'Request service',
+    'Three quick steps. We&rsquo;ll call you back.'
+  )}
+<div class="wrap">
+${crumbs(trail)}
+<article class="article">
+  <section class="prose reveal">
+    <p class="lede">I&rsquo;m a Master Plumber licensed in North Carolina, now proudly serving Virginia. A graduate of Emory &amp; Henry, I&rsquo;m happy to call the mountains home again.</p>
+    <p>My wife Liz served as a Navy Corpsman and is attending Emory &amp; Henry&rsquo;s nursing school &mdash; I couldn&rsquo;t be prouder of her. When we&rsquo;re not working, we&rsquo;re out riding the Harley or hiking with our dog Copper.</p>
+    <p>That&rsquo;s who shows up at your door: a neighbor with a license, a guarantee, and a reason to do it right.</p>
+  </section>
+
+  <section class="prose reveal">
+    <h2>What &ldquo;Master Plumber&ndash;led&rdquo; actually means</h2>
+    <p>Plumbing licenses come in tiers, and the difference matters more than most homeowners are ever told. A Master Plumber is the level that can design a system, pull the permit, and sign off on the work &mdash; not simply perform it under somebody else&rsquo;s license from an office three counties away.</p>
+    <p>In practice that means the person setting the standard on your job is on your job. When a repair turns out to be a symptom of something larger &mdash; a slab leak behind a dripping fixture, a vent problem behind a slow drain &mdash; the diagnosis happens on site, not on a phone call to a supervisor who has never seen it.</p>
+    <p>It also means we will tell you when the answer is cheaper than you expected. If a part will genuinely buy you a few more years, we say so rather than selling you the replacement.</p>
+  </section>
+
+  <section class="prose reveal">
+    <h2>Two names, one shop</h2>
+    <p>You may see us under two names, and both are us. The business is licensed as <strong>The Patriot&rsquo;s Plumber, LLC</strong> &mdash; that is the name on the license, on the Google listing, and on anything official. <strong>Patriot&rsquo;s Plumbing</strong> is the name we trade under, and the one you will see on invoices and on the truck.</p>
+    <p>If a document says one and the sign says the other, nothing is wrong. Same license, same plumber, same guarantee.</p>
+  </section>
+
+  <section class="prose reveal">
+    <h2>What you can count on</h2>
+    <ul class="ticks">
+      <li><strong>Licensed and insured.</strong> Both, verifiably, before anyone touches your house.</li>
+      <li><strong>Every job guaranteed.</strong> If something we did is not right, we come back and make it right.</li>
+      <li><strong>A drug-free workplace.</strong> We only hire plumbers we would send to our own family&rsquo;s house, because who walks through your door matters.</li>
+      <li><strong>We clean up like we were never there.</strong> Care for your home is the baseline, not an upsell.</li>
+      <li><strong>No games with the bill.</strong> What we quote is what we mean, and if something changes mid-job you hear it from us first.</li>
+    </ul>
+  </section>
+
+  <section class="prose reveal">
+    <h2>Residential and commercial</h2>
+    <p>Residential work is the bulk of what we do &mdash; repairs, water heaters, drains, and the kitchen, bathroom and laundry remodels our office takes on. On the commercial side we handle repairs and installations for businesses, rental property and buildings across the same service area.</p>
+    <p>There is also work we deliberately do not take on, and we would rather say so than waste your visit. If you are unsure whether your project is a fit, describe it on the phone &mdash; you will get a straight answer either way.</p>
+  </section>
+
+  <section class="prose reveal">
+    <h2>Where we work</h2>
+    <p>We cover the I-81 corridor across Washington, Smyth, Wythe and Grayson counties.</p>
+    <ul class="linkgrid">
+${pageTowns.map((t) => `      <li><a href="${townLink(t)}">Plumber in ${t.name}, VA</a></li>`).join('\n')}
+    </ul>
+    <p class="fine">Plus ${TOWNS.filter((t) => !t.page).map((t) => t.name).join(', ')} &mdash; see the <a href="/service-area/">full service area</a>, or browse <a href="/services/">everything we do</a>.</p>
+  </section>
+</article>
+</div>
+${closer('Have a job in mind? Call or text &mdash; you will talk to the people who will actually do the work.')}
+</main>
+${footer()}`;
+
+  return head({ path: '/about-us/', title, meta, schema }) + body;
+}
+
 /* ---------------------------------------------------------------- sitemap */
 
 function sitemap(paths) {
@@ -814,6 +914,9 @@ SERVICES.forEach((s) => {
 
 written.push(write('service-area/index.html', renderAreaHub()));
 smPaths.push({ path: '/service-area/', priority: '0.8' });
+
+written.push(write('about-us/index.html', renderAbout()));
+smPaths.push({ path: '/about-us/', priority: '0.6' });
 
 CITIES.forEach((c) => {
   written.push(write(`plumber/${c.slug}/index.html`, renderCity(c)));
