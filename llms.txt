@@ -1,0 +1,52 @@
+# Patriot's Plumbing
+
+> Master Plumber–led plumbing shop serving the I-81 corridor of Southwest Virginia — Washington, Smyth, Wythe and Grayson counties, plus the City of Bristol. Licensed and insured, every job guaranteed. Residential and commercial.
+
+- **Business name:** Patriot's Plumbing (legally The Patriot's Plumber, LLC — the license and the Google listing carry the legal name, invoices carry the trading name)
+- **Phone (call or text):** (276) 285-1392
+- **Email:** thepatriotsplumber@gmail.com
+- **Website:** https://thepatriotsplumber.com
+- **Type:** Plumber / plumbing contractor. Master Plumber–led. Licensed and insured. Residential and commercial.
+- **Region:** Southwest Virginia — the I-81 corridor.
+- **Counties served:** Washington, Smyth, Wythe and Grayson counties, plus the City of Bristol, Virginia.
+- **Towns served:** Abingdon, Bristol, Marion, Wytheville, Glade Spring, Emory, Meadowview, Damascus, Saltville, Chilhowie, Atkins, Independence, Troutdale, Fries — all in Virginia.
+- **Service model:** Mobile service business. We travel to the customer; there is no walk-in storefront address.
+- **Google Business Profile:** https://maps.google.com/?cid=9996931938350486345
+- **Facebook:** https://www.facebook.com/profile.php?id=61584678868541
+- **Financing:** available through Hearth — https://app.gethearth.com/partners/patriots-plumbing/bill/apply
+
+This file follows the llms.txt convention (https://llmstxt.org). Every page below is
+also listed in https://thepatriotsplumber.com/sitemap.xml. The complete text of the site in one file is
+at https://thepatriotsplumber.com/llms-full.txt.
+
+## Services
+
+- [Urgent Plumbing Repairs in Southwest Virginia](https://thepatriotsplumber.com/services/emergency-plumber/): Water where it should not be. Here is what to do in the first two minutes, and how we handle it when we get there.
+- [Water Heater Repair & Replacement](https://thepatriotsplumber.com/services/water-heater-repair/): No hot water, rusty water, or a puddle under the tank. We will tell you straight whether it is worth repairing.
+- [Drain Cleaning, Sewer & Water Line Repair](https://thepatriotsplumber.com/services/drain-cleaning/): Anyone can push a clog further down the line. We would rather find out why it keeps happening.
+- [Bathroom & Kitchen Plumbing Remodels](https://thepatriotsplumber.com/services/bathroom-kitchen-remodeling/): The part of a remodel nobody sees is the part that decides whether you love it in fifteen years.
+- [Rough-Ins & New Construction Plumbing](https://thepatriotsplumber.com/services/new-construction-plumbing/): Plumbing planned right from the studs, because the cost of getting it wrong compounds for the life of the building.
+- [Sump Pump & Sewage Pump Installation](https://thepatriotsplumber.com/services/sump-pump-installation/): A sump pump is the cheapest insurance in the house — right up until the day it is the reason you needed insurance.
+
+## Service area
+
+- [Plumber in Abingdon, Virginia](https://thepatriotsplumber.com/plumber/abingdon-va/): plumbing in Abingdon, Washington County, Virginia. One of the two towns we work in most — and the one where we most often open a wall and find something older than the house’s last three owners.
+- [Plumber in Bristol, Virginia](https://thepatriotsplumber.com/plumber/bristol-va/): plumbing in Bristol, City of Bristol, Virginia. A city with a state line down the middle of its main street, and a housing stock old enough to have opinions.
+- [Plumber in Marion, Virginia](https://thepatriotsplumber.com/plumber/marion-va/): plumbing in Marion, Smyth County, Virginia. Smyth County has a real mix — town water in Marion proper, wells and septic once you head for the mountains.
+- [Plumber in Wytheville, Virginia](https://thepatriotsplumber.com/plumber/wytheville-va/): plumbing in Wytheville, Wythe County, Virginia. The far end of our territory, and the most rural — which changes what tends to go wrong.
+- [Plumber in Glade Spring, Virginia](https://thepatriotsplumber.com/plumber/glade-spring-va/): plumbing in Glade Spring, Washington County, Virginia. Ten minutes up the interstate from us, and the gateway to the rural half of Washington County.
+- [Plumber in Emory, Virginia](https://thepatriotsplumber.com/plumber/emory-va/): plumbing in Emory, Washington County, Virginia. Our own back yard, and the town on this list we have the longest personal history with.
+- [Plumber in Damascus, Virginia](https://thepatriotsplumber.com/plumber/damascus-va/): plumbing in Damascus, Washington County, Virginia. A trail town, which means a lot of buildings here sit empty for stretches — and empty buildings fail differently.
+- [Plumber in Saltville, Virginia](https://thepatriotsplumber.com/plumber/saltville-va/): plumbing in Saltville, Smyth County, Virginia. A town built around one industry, which means whole streets of houses share a plumbing vintage.
+- [Plumber in Chilhowie, Virginia](https://thepatriotsplumber.com/plumber/chilhowie-va/): plumbing in Chilhowie, Smyth County, Virginia. Right on our regular run up I-81, which makes it one of the easier places on this list for us to reach.
+
+## About
+
+- [About Patriot's Plumbing](https://thepatriotsplumber.com/about-us/): who holds the Master Plumber license, what that license covers, why the business trades under two names, and what the guarantee includes.
+- [All services](https://thepatriotsplumber.com/services/): index of everything the shop does.
+- [Full service area](https://thepatriotsplumber.com/service-area/): every town and county covered, grouped by county.
+
+## Optional
+
+- [Complete site text as markdown](https://thepatriotsplumber.com/llms-full.txt): all 19 pages in one fetch.
+- [Financing through Hearth](https://app.gethearth.com/partners/patriots-plumbing/bill/apply): third-party financing partner. Checking options does not affect credit score.

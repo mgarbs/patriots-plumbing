@@ -23,6 +23,7 @@ const ENT = {
   '&mdash;': '—', '&ndash;': '–', '&rsquo;': '’', '&lsquo;': '‘',
   '&ldquo;': '“', '&rdquo;': '”', '&hellip;': '…', '&nbsp;': ' ',
   '&amp;': '&', '&lt;': '<', '&gt;': '>',
+  '&bull;': '•', '&rarr;': '→', '&times;': '×', '&quot;': '"',
 };
 const toText = (s) => String(s).replace(/&[a-z]+;/g, (m) => (m in ENT ? ENT[m] : m));
 
@@ -873,6 +874,184 @@ ${footer()}`;
   return head({ path: '/about-us/', title, meta, schema }) + body;
 }
 
+/* ------------------------------------------------- AI / LLM crawlability */
+/* Three artefacts, per the llmstxt.org convention:
+     /llms.txt       curated index — what this business is, plus every page with
+                     a one-line description. Cheap for an agent to read whole.
+     /llms-full.txt  the entire site as markdown in one fetch, so an assistant
+                     answering "who plumbs in Chilhowie" does not have to crawl
+                     19 HTML pages and strip nav/forms out of each one.
+     robots.txt      names the major AI crawlers explicitly. `User-agent: *` already
+                     permits them, but several operators treat an unnamed group as
+                     ambiguous, and naming them documents the intent.
+   Both llms files are GENERATED from the same content the HTML is built from, so
+   they cannot drift. Regenerate with `node _build/build.js`. */
+
+/* Markdown-ish text of one generated page. Reads the emitted HTML rather than the
+   content objects so what an agent sees is exactly what is published. */
+function htmlToMarkdown(html) {
+  let m = (html.match(/<main[\s\S]*?<\/main>/) || [''])[0];
+  m = m
+    .replace(/<form[\s\S]*?<\/form>/g, '')
+    .replace(/<svg[\s\S]*?<\/svg>/g, '')
+    .replace(/<button[\s\S]*?<\/button>/g, '')
+    .replace(/<nav[\s\S]*?<\/nav>/g, '')
+    // The lead form's heading/sub sit OUTSIDE <form>, so they survive the strip
+    // above and read as a real section ("## Request service in Chilhowie") in a
+    // text-only corpus. It is UI, not content.
+    .replace(/<div class="lead-card__head">[\s\S]*?<\/div>/g, '')
+    // <br> is a word boundary; without this "right<br>the" becomes "rightthe".
+    .replace(/<br\s*\/?>/gi, ' ');
+
+  const parts = [];
+  const re = /<(h1|h2|h3|p|li)\b[^>]*>([\s\S]*?)<\/\1>/g;
+  let mm;
+  while ((mm = re.exec(m))) {
+    const tag = mm[1];
+    let text = mm[2]
+      // keep links as markdown so an agent can still follow internal structure
+      .replace(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g, (_, href, label) => {
+        const abs = href.startsWith('/') ? BIZ.origin + href : href;
+        return `[${label.replace(/<[^>]+>/g, '')}](${abs})`;
+      })
+      .replace(/<[^>]+>/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    text = toText(text);
+    if (!text) continue;
+    if (tag === 'h1') parts.push('# ' + text);
+    else if (tag === 'h2') parts.push('## ' + text);
+    else if (tag === 'h3') parts.push('### ' + text);
+    else if (tag === 'li') parts.push('- ' + text);
+    else parts.push(text);
+  }
+  // collapse the runs of list items into blocks, everything else double-spaced
+  return parts
+    .map((p, i) => (p.startsWith('- ') && parts[i + 1] && parts[i + 1].startsWith('- ') ? p + '\n' : p + '\n\n'))
+    .join('')
+    .trim();
+}
+
+/* The facts an assistant is most often asked for, stated once, unambiguously.
+   Deliberately NO business hours: the site does not publish any, and inventing
+   them here would be feeding machines a fact no human page supports. */
+function bizFacts() {
+  const towns = TOWNS.map((t) => t.name).join(', ');
+  return [
+    `- **Business name:** ${toText(BIZ.altName)} (legally ${toText(BIZ.name)}, LLC — the license and the Google listing carry the legal name, invoices carry the trading name)`,
+    `- **Phone (call or text):** ${BIZ.phoneDisplay}`,
+    `- **Email:** ${BIZ.email}`,
+    `- **Website:** ${BIZ.origin}`,
+    `- **Type:** Plumber / plumbing contractor. Master Plumber–led. Licensed and insured. Residential and commercial.`,
+    `- **Region:** ${BIZ.region} — the I-81 corridor.`,
+    `- **Counties served:** Washington, Smyth, Wythe and Grayson counties, plus the City of Bristol, Virginia.`,
+    `- **Towns served:** ${towns} — all in Virginia.`,
+    `- **Service model:** Mobile service business. We travel to the customer; there is no walk-in storefront address.`,
+    `- **Google Business Profile:** ${BIZ.gbpUrl}`,
+    `- **Facebook:** ${BIZ.facebook}`,
+    `- **Financing:** available through Hearth — ${BIZ.hearth}`,
+  ].join('\n');
+}
+
+function llmsTxt() {
+  const svc = SERVICES.map(
+    (s) => `- [${toText(s.h1)}](${url(svcLink(s))}): ${toText(s.lead)}`
+  ).join('\n');
+  const cities = CITIES.map(
+    (c) => `- [${toText(c.h1)}](${url(townLink(c))}): plumbing in ${c.town}, ${c.county}, Virginia. ${toText(c.lead)}`
+  ).join('\n');
+
+  return `# ${toText(BIZ.altName)}
+
+> Master Plumber–led plumbing shop serving the I-81 corridor of Southwest Virginia — Washington, Smyth, Wythe and Grayson counties, plus the City of Bristol. Licensed and insured, every job guaranteed. Residential and commercial.
+
+${bizFacts()}
+
+This file follows the llms.txt convention (https://llmstxt.org). Every page below is
+also listed in ${url('/sitemap.xml')}. The complete text of the site in one file is
+at ${url('/llms-full.txt')}.
+
+## Services
+
+${svc}
+
+## Service area
+
+${cities}
+
+## About
+
+- [About ${toText(BIZ.altName)}](${url('/about-us/')}): who holds the Master Plumber license, what that license covers, why the business trades under two names, and what the guarantee includes.
+- [All services](${url('/services/')}): index of everything the shop does.
+- [Full service area](${url('/service-area/')}): every town and county covered, grouped by county.
+
+## Optional
+
+- [Complete site text as markdown](${url('/llms-full.txt')}): all ${1 + 2 + SERVICES.length + CITIES.length + 1} pages in one fetch.
+- [Financing through Hearth](${BIZ.hearth}): third-party financing partner. Checking options does not affect credit score.
+`;
+}
+
+function llmsFull(pageFiles) {
+  const head = `# ${toText(BIZ.altName)} — complete site text
+
+> Generated from ${BIZ.origin} on ${BUILD_STAMP}. This is the full editorial content of
+> every page, converted to markdown. Navigation, forms and styling are stripped.
+> Curated index: ${url('/llms.txt')} · Sitemap: ${url('/sitemap.xml')}
+
+${bizFacts()}
+
+---
+`;
+  const bodies = pageFiles
+    .map(({ path: p, file }) => {
+      const md = htmlToMarkdown(fs.readFileSync(path.join(ROOT, file), 'utf8'));
+      if (!md) return null;
+      return `\n\n<!-- ${url(p)} -->\n\n**Source: ${url(p)}**\n\n${md}\n\n---\n`;
+    })
+    .filter(Boolean)
+    .join('');
+  return head + bodies;
+}
+
+/* Named AI crawlers. Grouped by operator so the file stays readable; every group
+   gets the same Allow, because the whole site is public marketing copy we WANT
+   assistants to quote when someone asks who plumbs in Abingdon. */
+const AI_AGENTS = [
+  'GPTBot', 'OAI-SearchBot', 'ChatGPT-User',              // OpenAI
+  'ClaudeBot', 'Claude-User', 'Claude-SearchBot',          // Anthropic
+  'PerplexityBot', 'Perplexity-User',                      // Perplexity
+  'Google-Extended',                                       // Google (Gemini/Vertex grounding)
+  'Applebot-Extended',                                     // Apple Intelligence
+  'meta-externalagent',                                    // Meta AI
+  'Amazonbot',                                             // Amazon / Alexa
+  'DuckAssistBot',                                         // DuckDuckGo
+  'Bingbot',                                               // Bing / Copilot
+  'CCBot',                                                 // Common Crawl
+  'cohere-ai', 'YouBot', 'Diffbot', 'Timpibot',
+];
+
+function robotsTxt() {
+  const aiGroups = AI_AGENTS.map((a) => `User-agent: ${a}`).join('\n');
+  return `# ${toText(BIZ.altName)} — ${BIZ.origin}
+# Everything here is public marketing copy. Search engines and AI assistants are
+# welcome to crawl, index, quote and cite it.
+
+User-agent: *
+Allow: /
+
+# AI assistants and answer engines, named explicitly so there is no ambiguity.
+${aiGroups}
+Allow: /
+
+# Curated index for LLMs (https://llmstxt.org) and the full site text:
+# ${url('/llms.txt')}
+# ${url('/llms-full.txt')}
+
+Sitemap: ${url('/sitemap.xml')}
+`;
+}
+
 /* ---------------------------------------------------------------- sitemap */
 
 function sitemap(paths) {
@@ -903,36 +1082,40 @@ function write(rel, contents) {
 
 const written = [];
 const smPaths = [{ path: '/', priority: '1.0' }];
+/* Every content page, in reading order, for llms-full.txt. index.html is
+   hand-maintained rather than generated, but it is still the site's front page,
+   so it leads the corpus. */
+const pageFiles = [{ path: '/', file: 'index.html' }];
 
 written.push(write('services/index.html', renderServicesHub()));
 smPaths.push({ path: '/services/', priority: '0.8' });
+pageFiles.push({ path: '/services/', file: 'services/index.html' });
 
 SERVICES.forEach((s) => {
   written.push(write(`services/${s.slug}/index.html`, renderService(s)));
   smPaths.push({ path: svcLink(s), priority: '0.9' });
+  pageFiles.push({ path: svcLink(s), file: `services/${s.slug}/index.html` });
 });
 
 written.push(write('service-area/index.html', renderAreaHub()));
 smPaths.push({ path: '/service-area/', priority: '0.8' });
+pageFiles.push({ path: '/service-area/', file: 'service-area/index.html' });
 
 written.push(write('about-us/index.html', renderAbout()));
 smPaths.push({ path: '/about-us/', priority: '0.6' });
+pageFiles.push({ path: '/about-us/', file: 'about-us/index.html' });
 
 CITIES.forEach((c) => {
   written.push(write(`plumber/${c.slug}/index.html`, renderCity(c)));
   smPaths.push({ path: townLink(c), priority: '0.9' });
+  pageFiles.push({ path: townLink(c), file: `plumber/${c.slug}/index.html` });
 });
 
 written.push(write('sitemap.xml', sitemap(smPaths)));
-written.push(
-  write(
-    'robots.txt',
-    `User-agent: *
-Allow: /
+written.push(write('robots.txt', robotsTxt()));
 
-Sitemap: ${url('/sitemap.xml')}
-`
-  )
-);
+/* llms-full.txt reads the pages back off disk, so it must run last. */
+written.push(write('llms.txt', llmsTxt()));
+written.push(write('llms-full.txt', llmsFull(pageFiles)));
 
 console.log('Built ' + written.length + ' files:\n' + written.map((w) => '  ' + w).join('\n'));
